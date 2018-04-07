@@ -1,0 +1,22 @@
+{{ define "header" -}}
+    {{ partial "header.html" . }}
+{{- end }}
+
+{{ define "content" -}}
+    <h3>About me</h3>
+    <p>Web developer passionate about React and Symfony. I craft snappy progressive web applications that delight its users.</p>
+    <h3>Curriculum Vitae</h3>
+    <h3>Working on</h3>
+    <h3>Worked on</h3>
+    <h3>Contact</h3>
+    <p>Reachable via email at:
+        {{ with .Site.Params.social.email }}
+            <a href="mailto:{{.}}">
+                arthurpicerna@gmail.com
+            </a>
+        {{ end }}<br/>
+        Let's talk!
+    </p>
+{{- end }}
+
+{{ define "footer" -}}{{- end }}

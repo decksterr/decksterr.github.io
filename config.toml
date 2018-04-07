@@ -1,0 +1,57 @@
+## Basic Configuration
+baseurl = "https://decksterr.github.io/"
+languageCode = "en"
+
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = "your-disqus-shortname"
+# googleAnalytics = "your-google-analytics-id"
+# enableRobotsTXT = true
+
+## Site Settings
+[params]
+    author = "Arthur Picerna"
+    title = "Arthur Picerna"
+    aka = "(a.k.a. decksterr)"
+    description = "Full-stack web developer"
+    # authorimage = "/img/hugo.png"
+    dateformat = "Jan 2, 2006"
+    highlightjs = true
+    # highlightjsstyle = "github"
+    # please choose either GraphComment or Disqus
+    # GraphCommentId = "your-graph-comment-id" 
+
+## Social Accounts
+[params.social]
+    github = "decksterr"
+    gitlab = "decksterr"
+    # instagram = "<username>"
+    # xing = "<username>"
+    linkedin = "arthurpicerna"
+    twitter = "_decksterr_"
+    # facebook = "<username>"
+    # stackoverflow = "<username>"
+    email = "arthurpicerna@gmail.com"
+
+## Main Menu
+[[menu.main]]
+    name = "About"
+    weight = 1
+    identifier = "about"
+    url = "/about/"
+[[menu.main]]
+    name = "CV"
+    identifier = "cv"
+    weight = 2
+    url = "/cv/"
+[[menu.main]]
+    name = "Work"
+    weight = 3
+    identifier = "work"
+    url = "/work/"
+[[menu.main]]
+    name = "Contact"
+    identifier = "contact"
+    weight = 4
+    url = "/contact/"
