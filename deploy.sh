@@ -20,12 +20,14 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 git clone "https://github.com/decksterr/decksterr.github.io.git"
 git mv decksterr.gihub.io public
+git rm -r public/*
 
 # Build the project.
 #hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 hugo -t hyde-hyde
 
 cd public
+
 
 git add .
 git commit -m "Build update: $msg"
