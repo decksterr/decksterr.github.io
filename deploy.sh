@@ -11,7 +11,6 @@ echo -e "\033[0;32mSyncing source files with repo...\033[0m"
 
 git rm -r public
 git add .
-git reset -- public
 
 git commit -m "Source update: $msg"
 
@@ -25,6 +24,9 @@ hugo -t hyde-hyde
 
 # Go To Public folder
 cd public
+
+git remote add origin "https://github.com/decksterr/decksterr.github.io.git"
+
 # Add changes to git.
 git add .
 

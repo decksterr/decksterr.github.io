@@ -2,7 +2,7 @@
     <div class="container text-center sidebar-sticky">
         <div class="sidebar-about text-center">
             <a class="navlink__home" href="{{ .Site.BaseURL }}">
-                <h1 class="brand">{{ .Site.Title }}</h1>
+                <h1 class="brand">{{ .Site.Params.title }}</h1>
                 <span class="aka">{{ .Site.Params.aka }}</span>
             </a>
             {{ with .Site.Params.authorimage }}
