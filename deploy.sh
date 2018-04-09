@@ -9,6 +9,7 @@ fi
 
 echo -e "\033[0;32mSyncing source files with repo...\033[0m"
 
+git rm -r public
 git add .
 git reset -- public
 
