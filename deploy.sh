@@ -19,10 +19,14 @@ git push origin source
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 git clone "https://github.com/decksterr/decksterr.github.io.git"
-git mv decksterr.github.io public
-mv public/.git temp/.git
-rm -rf public/*
-mv temp/.git public/.git
+mkdir public && mkdir public/.git
+cp -rv decksterr.github.io/.git/* public/.git
+
+cd public
+
+git pull origin master
+
+cd ..
 
 # Build the project.
 #hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
