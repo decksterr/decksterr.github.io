@@ -9,8 +9,11 @@ fi
 
 echo -e "\033[0;32mSyncing source files with repo...\033[0m"
 
+rm -rvf public
+rm -rvf decksterr.github.io
+
 git checkout source
-rm -rf public
+git pull origin source
 git add .
 
 git commit -m "Source update: $msg"
@@ -21,6 +24,7 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 git clone "https://github.com/decksterr/decksterr.github.io.git"
 mkdir public && mkdir public/.git
 cp -rv decksterr.github.io/.git/* public/.git
+rm -rvf decksterr.github.io
 
 cd public
 
