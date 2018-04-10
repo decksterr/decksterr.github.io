@@ -10,6 +10,7 @@ theme = "hyde-hyde"
 # enableRobotsTXT = true
 
 ## Site Settings
+Title = "Arthur Picerna (a.k.a. decksterr)"
 [params]
     author = "Arthur Picerna"
     title = "Arthur Picerna"
