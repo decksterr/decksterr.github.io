@@ -18,9 +18,12 @@ git push origin source
 
 echo -e "\n---\n---\e[38;5;36m Syncing with master branch... \e[0m\n---\n"
 
-git clone "git@github.com:decksterr/decksterr.github.io.git"
-cp -r decksterr.github.io public
-rm -rvf decksterr.github.io
+cd public
+
+git checkout master 
+git pull
+
+cd  ..
 
 # Build the project.
 #hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
@@ -32,7 +35,6 @@ cd public
 
 git add .
 git commit -m "Build update: $msg"
-git remote add origin https://github.com/decksterr/decksterr.github.io.git
 git push origin master
 
 # Come Back up to the Project Root
