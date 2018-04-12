@@ -20,7 +20,7 @@ echo -e "\n---\n---\e[38;5;36m Syncing with master branch... \e[0m\n---\n"
 
 git clone "git@github.com:decksterr/decksterr.github.io.git"
 
-mv decksterr.github.io.git public
+mv decksterr.github.io public
 cd public
 
 git checkout master 
