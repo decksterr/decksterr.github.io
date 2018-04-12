@@ -9,11 +9,8 @@ fi
 
 echo -e "\n---\n---\e[38;5;36m Syncing source files with repo... \e[0m\n---\n"
 
-rm -rvf public
-rm -rvf decksterr.github.io
-
 git checkout source
-git pull origin source
+rm -rf public
 git add .
 
 git commit -m "Source update: $msg"
@@ -21,16 +18,9 @@ git push origin source
 
 echo -e "\n---\n---\e[38;5;36m Syncing with master branch... \e[0m\n---\n"
 
-git clone "https://github.com/decksterr/decksterr.github.io.git"
-mkdir public && mkdir public/.git
-cp -rv decksterr.github.io/.git/* public/.git
+git clone "git@github.com:decksterr/decksterr.github.io.git"
+cp -r decksterr.github.io public
 rm -rvf decksterr.github.io
-
-cd public
-
-git pull origin master
-
-cd ..
 
 # Build the project.
 #hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
@@ -42,6 +32,7 @@ cd public
 
 git add .
 git commit -m "Build update: $msg"
+git remote add origin https://github.com/decksterr/decksterr.github.io.git
 git push origin master
 
 # Come Back up to the Project Root
