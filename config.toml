@@ -10,10 +10,10 @@ theme = "hyde-hyde"
 # enableRobotsTXT = true
 
 ## Site Settings
-Title = "Arthur Picerna (a.k.a. decksterr)"
 [params]
     author = "Arthur Picerna"
-    title = "Arthur Picerna"
+    title = "Arthur Picerna (a.k.a. decksterr)"
+    sidebartitle = "Arthur Picerna"
     aka = "(a.k.a. decksterr)"
     description = "Full-stack web developer"
     # authorimage = "/img/hugo.png"
