@@ -7,7 +7,7 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 
-echo -e "\033[0;32mSyncing source files with repo...\033[0m"
+echo -e "\n---\n---\e[38;5;36m Syncing source files with repo... \e[0m\n---\n"
 
 git checkout source
 rm -rf public
@@ -16,7 +16,7 @@ git add .
 git commit -m "Source update: $msg"
 git push origin source
 
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo -e "\n---\n---\e[38;5;36m Syncing with master branch... \e[0m\n---\n"
 
 git clone "https://github.com/decksterr/decksterr.github.io.git"
 git mv decksterr.github.io public
@@ -27,6 +27,8 @@ mv temp/.git public/.git
 # Build the project.
 #hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 hugo -t hyde-hyde
+
+echo -e "\n---\n---\e[38;5;36m Deploying updates... \e[0m\n---\n"
 
 cd public
 
