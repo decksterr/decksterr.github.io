@@ -21,7 +21,7 @@ theme = "hyde-hyde"
     highlightjs = true
     # highlightjsstyle = "github"
     # please choose either GraphComment or Disqus
-    # GraphCommentId = "your-graph-comment-id" 
+    # GraphCommentId = "your-graph-comment-id"
 
 ## Social Accounts
 [params.social]
@@ -40,19 +40,19 @@ theme = "hyde-hyde"
     name = "About"
     weight = 1
     identifier = "about"
-    url = "/about/"
+    url = "#about"
 [[menu.main]]
-    name = "CV"
-    identifier = "cv"
+    name = "Experiences"
+    identifier = "experiences"
     weight = 2
-    url = "/cv/"
+    url = "#experiences"
 [[menu.main]]
-    name = "Work"
+    name = "Education"
     weight = 3
-    identifier = "work"
-    url = "/work/"
+    identifier = "education"
+    url = "#education"
 [[menu.main]]
     name = "Contact"
     identifier = "contact"
     weight = 4
-    url = "/contact/"
+    url = "#contact"
